@@ -161,14 +161,14 @@ public extension UIScrollView {
     }
 
     /// begin refreshing
-    public func spr_beginRefreshing() {
-        spr_refreshHeader?.beginRefreshing()
+    public func spr_beginRefreshing(withDuration duration: TimeInterval = 0.3) {
+        spr_refreshHeader?.beginRefreshing(withDuration: duration)
     }
 
     /// end refreshing
-    public func spr_endRefreshing() {
-        spr_refreshHeader?.endRefreshing()
-        spr_refreshFooter?.endRefreshing()
+    public func spr_endRefreshing(withDuration duration: TimeInterval = 0.3) {
+        spr_refreshHeader?.endRefreshing(withDuration: duration)
+        spr_refreshFooter?.endRefreshing(withDuration: duration)
     }
 }
 

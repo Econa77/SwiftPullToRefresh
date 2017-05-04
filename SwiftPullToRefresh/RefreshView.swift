@@ -120,13 +120,13 @@ open class RefreshView: UIView {
         beginRefreshing()
     }
 
-    func beginRefreshing() {
+    func beginRefreshing(withDuration duration: TimeInterval = 0.3) {
         guard let scrollView = scrollView, !isRefreshing else { return }
 
         progress = 1
         isRefreshing = true
 
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: duration, animations: {
             switch self.style {
             case .header:
                 scrollView.contentOffset.y = -self.height - scrollView.contentInset.top
@@ -142,10 +142,10 @@ open class RefreshView: UIView {
         })
     }
 
-    func endRefreshing() {
+    func endRefreshing(withDuration duration: TimeInterval = 0.3) {
         guard let scrollView = scrollView, isRefreshing else { return }
 
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: duration, animations: {
             switch self.style {
             case .header:
                 scrollView.contentInset.top -= self.height
