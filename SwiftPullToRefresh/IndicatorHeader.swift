@@ -9,9 +9,10 @@
 import UIKit
 
 final class IndicatorHeader: RefreshView {
-    private let indicatorItem = IndicatorItem()
+    private let indicatorItem: IndicatorItem
 
-    init(height: CGFloat, action: @escaping () -> Void) {
+    init(height: CGFloat, color: UIColor, action: @escaping () -> Void) {
+        self.indicatorItem = IndicatorItem(color: color)
         super.init(height: height, action: action)
 
         layer.addSublayer(indicatorItem.arrowLayer)

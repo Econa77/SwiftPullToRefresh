@@ -37,9 +37,10 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorHeader(height: CGFloat = Default.short,
+    public func spr_setIndicatorHeader(color: UIColor = Default.color,
+                                       height: CGFloat = Default.short,
                                        action: @escaping () -> Void) {
-        spr_refreshHeader = IndicatorHeader(height: height, action: action)
+        spr_refreshHeader = IndicatorHeader(height: height, color: color, action: action)
     }
 
     /// Text header
@@ -54,9 +55,10 @@ public extension UIScrollView {
                                   pullingText: String = Default.pullingText,
                                   releaseText: String = Default.releaseText,
                                   height: CGFloat = Default.short,
+                                  color: UIColor = Default.color,
                                   action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: pullingText, releaseText: releaseText)
-        spr_refreshHeader = TextHeader(textItem: textItem, height: height, action: action)
+        spr_refreshHeader = TextHeader(textItem: textItem, height: height, color: color, action: action)
     }
 
     /// GIF header
@@ -97,9 +99,10 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorFooter(height: CGFloat = Default.short,
+    public func spr_setIndicatorFooter(color: UIColor = Default.color,
+                                       height: CGFloat = Default.short,
                                        action: @escaping () -> Void) {
-        spr_refreshFooter = IndicatorFooter(height: height, action: action)
+        spr_refreshFooter = IndicatorFooter(height: height, color: color, action: action)
     }
 
     /// Text footer
@@ -114,9 +117,10 @@ public extension UIScrollView {
                                   pullingText: String = Default.pullingFooterText,
                                   releaseText: String = Default.releaseFooterText,
                                   height: CGFloat = Default.short,
+                                  color: UIColor = Default.color,
                                   action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: pullingText, releaseText: releaseText)
-        spr_refreshFooter = TextFooter(textItem: textItem, height: height, action: action)
+        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, action: action)
     }
 
     /// Indicator auto refresh footer (auto triggered when scroll down to the bottom of the content)
@@ -124,9 +128,10 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorAutoFooter(height: CGFloat = Default.short,
+    public func spr_setIndicatorAutoFooter(color: UIColor = Default.color,
+                                           height: CGFloat = Default.short,
                                            action: @escaping () -> Void) {
-        spr_refreshFooter = IndicatorFooter(height: height, isAuto: true, action: action)
+        spr_refreshFooter = IndicatorFooter(height: height, color: color, isAuto: true, action: action)
     }
 
     /// Text auto refresh footer (auto triggered when scroll down to the bottom of the content)
@@ -137,9 +142,10 @@ public extension UIScrollView {
     ///   - action: refresh action
     public func spr_setTextAutoFooter(loadingText: String = Default.loadingText,
                                       height: CGFloat = Default.short,
+                                      color: UIColor = Default.color,
                                       action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: "", releaseText: "")
-        spr_refreshFooter = TextFooter(textItem: textItem, height: height, isAuto: true, action: action)
+        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, isAuto: true, action: action)
     }
 
     /// Custom header

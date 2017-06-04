@@ -20,13 +20,18 @@ final class IndicatorItem {
 
         let layer = CAShapeLayer()
         layer.path = path.cgPath
-        layer.strokeColor = UIColor.black.withAlphaComponent(0.8).cgColor
+        layer.strokeColor = self.color.cgColor
         layer.lineWidth = 2
         layer.lineCap = kCALineCapRound
         return layer
     }()
 
     let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let color: UIColor
+
+    init(color: UIColor) {
+        self.color = color
+    }
 
     func didUpdateState(_ isRefreshing: Bool) {
         arrowLayer.isHidden = isRefreshing
