@@ -37,10 +37,11 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorHeader(color: UIColor = Default.color,
-                                       height: CGFloat = Default.short,
+    public func spr_setIndicatorHeader(height: CGFloat = Default.short,
+                                       color: UIColor = Default.color,
+                                       indicatorStyle: UIActivityIndicatorViewStyle,
                                        action: @escaping () -> Void) {
-        spr_refreshHeader = IndicatorHeader(height: height, color: color, action: action)
+        spr_refreshHeader = IndicatorHeader(height: height, color: color, indicatorStyle: indicatorStyle, action: action)
     }
 
     /// Text header
@@ -56,9 +57,10 @@ public extension UIScrollView {
                                   releaseText: String = Default.releaseText,
                                   height: CGFloat = Default.short,
                                   color: UIColor = Default.color,
+                                  indicatorStyle: UIActivityIndicatorViewStyle,
                                   action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: pullingText, releaseText: releaseText)
-        spr_refreshHeader = TextHeader(textItem: textItem, height: height, color: color, action: action)
+        spr_refreshHeader = TextHeader(textItem: textItem, height: height, color: color, indicatorStyle: indicatorStyle, action: action)
     }
 
     /// GIF header
@@ -99,10 +101,11 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorFooter(color: UIColor = Default.color,
-                                       height: CGFloat = Default.short,
+    public func spr_setIndicatorFooter(height: CGFloat = Default.short,
+                                       color: UIColor = Default.color,
+                                       indicatorStyle: UIActivityIndicatorViewStyle,
                                        action: @escaping () -> Void) {
-        spr_refreshFooter = IndicatorFooter(height: height, color: color, action: action)
+        spr_refreshFooter = IndicatorFooter(height: height, color: color, indicatorStyle: indicatorStyle, action: action)
     }
 
     /// Text footer
@@ -118,9 +121,10 @@ public extension UIScrollView {
                                   releaseText: String = Default.releaseFooterText,
                                   height: CGFloat = Default.short,
                                   color: UIColor = Default.color,
+                                  indicatorStyle: UIActivityIndicatorViewStyle,
                                   action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: pullingText, releaseText: releaseText)
-        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, action: action)
+        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, indicatorStyle: indicatorStyle, action: action)
     }
 
     /// Indicator auto refresh footer (auto triggered when scroll down to the bottom of the content)
@@ -128,10 +132,11 @@ public extension UIScrollView {
     /// - Parameters:
     ///   - height: refresh view height and also the trigger requirement, default is 60
     ///   - action: refresh action
-    public func spr_setIndicatorAutoFooter(color: UIColor = Default.color,
-                                           height: CGFloat = Default.short,
+    public func spr_setIndicatorAutoFooter(height: CGFloat = Default.short,
+                                           color: UIColor = Default.color,
+                                           indicatorStyle: UIActivityIndicatorViewStyle,
                                            action: @escaping () -> Void) {
-        spr_refreshFooter = IndicatorFooter(height: height, color: color, isAuto: true, action: action)
+        spr_refreshFooter = IndicatorFooter(height: height, color: color, indicatorStyle: indicatorStyle, isAuto: true, action: action)
     }
 
     /// Text auto refresh footer (auto triggered when scroll down to the bottom of the content)
@@ -143,9 +148,10 @@ public extension UIScrollView {
     public func spr_setTextAutoFooter(loadingText: String = Default.loadingText,
                                       height: CGFloat = Default.short,
                                       color: UIColor = Default.color,
+                                      indicatorStyle: UIActivityIndicatorViewStyle,
                                       action: @escaping () -> Void) {
         let textItem = TextItem(loadingText: loadingText, pullingText: "", releaseText: "")
-        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, isAuto: true, action: action)
+        spr_refreshFooter = TextFooter(textItem: textItem, height: height, color: color, indicatorStyle: indicatorStyle, isAuto: true, action: action)
     }
 
     /// Custom header

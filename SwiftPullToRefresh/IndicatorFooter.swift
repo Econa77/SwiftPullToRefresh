@@ -13,9 +13,9 @@ final class IndicatorFooter: RefreshView {
 
     private let isAuto: Bool
 
-    init(height: CGFloat, color: UIColor, isAuto: Bool = false, action: @escaping () -> Void) {
+    init(height: CGFloat, color: UIColor, indicatorStyle: UIActivityIndicatorViewStyle, isAuto: Bool = false, action: @escaping () -> Void) {
         self.isAuto = isAuto
-        self.indicatorItem = IndicatorItem(color: color)
+        self.indicatorItem = IndicatorItem(color: color, indicaorStyle: indicatorStyle)
         super.init(height: height, style: isAuto ? .autoFooter : .footer, action: action)
 
         if !isAuto {

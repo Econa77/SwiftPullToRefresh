@@ -26,11 +26,12 @@ final class IndicatorItem {
         return layer
     }()
 
-    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let indicator: UIActivityIndicatorView
     let color: UIColor
 
-    init(color: UIColor) {
+    init(color: UIColor, indicaorStyle: UIActivityIndicatorViewStyle) {
         self.color = color
+        self.indicator = UIActivityIndicatorView(activityIndicatorStyle: indicaorStyle)
     }
 
     func didUpdateState(_ isRefreshing: Bool) {

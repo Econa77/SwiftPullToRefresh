@@ -13,9 +13,9 @@ final class TextHeader: RefreshView {
 
     private let textItem: TextItem
 
-    init(textItem: TextItem, height: CGFloat, color: UIColor, action: @escaping () -> Void) {
+    init(textItem: TextItem, height: CGFloat, color: UIColor, indicatorStyle: UIActivityIndicatorViewStyle, action: @escaping () -> Void) {
         self.textItem = textItem
-        self.indicatorItem = IndicatorItem(color: color)
+        self.indicatorItem = IndicatorItem(color: color, indicaorStyle: indicatorStyle)
         super.init(height: height, action: action)
 
         layer.addSublayer(indicatorItem.arrowLayer)
