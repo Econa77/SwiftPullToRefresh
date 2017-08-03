@@ -19,11 +19,11 @@ class TestViewController: UIViewController {
 
         switch style {
         case .indicatorHeader:
-            scrollView.spr_setIndicatorHeader { [weak self] in
+            scrollView.spr_setIndicatorHeader(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         case .textHeader:
-            scrollView.spr_setTextHeader { [weak self] in
+            scrollView.spr_setTextHeader(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         case .smallGIFHeader:
@@ -50,19 +50,19 @@ class TestViewController: UIViewController {
             }
             scrollView.spr_setCustomHeader(headerView: superCatHeader)
         case .indicatorFooter:
-            scrollView.spr_setIndicatorFooter { [weak self] in
+            scrollView.spr_setIndicatorFooter(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         case .textFooter:
-            scrollView.spr_setTextFooter { [weak self] in
+            scrollView.spr_setTextFooter(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         case .indicatorAutoFooter:
-            scrollView.spr_setIndicatorAutoFooter { [weak self] in
+            scrollView.spr_setIndicatorAutoFooter(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         case .textAutoFooter:
-            scrollView.spr_setTextAutoFooter { [weak self] in
+            scrollView.spr_setTextAutoFooter(indicatorStyle: .white) { [weak self] in
                 self?.action()
             }
         }
