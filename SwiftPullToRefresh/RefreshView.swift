@@ -125,7 +125,7 @@ open class RefreshView: UIView {
 
         progress = 1
         isRefreshing = true
-        FeedbackEngine.impact.feedback(.light)
+        FeedbackEngine.impact.feedback(.medium)
 
         UIView.animate(withDuration: duration, animations: {
             switch self.style {
