@@ -30,6 +30,7 @@
 		B38741A61EB587C000EB5503 /* demo-big.gif in Resources */ = {isa = PBXBuildFile; fileRef = B38741A51EB587C000EB5503 /* demo-big.gif */; };
 		B3D75F911EB5EB63001388E6 /* GIFTextHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75F901EB5EB63001388E6 /* GIFTextHeader.swift */; };
 		B3D75F9B1EB5FC05001388E6 /* demo-small.gif in Resources */ = {isa = PBXBuildFile; fileRef = B3D75F9A1EB5FC05001388E6 /* demo-small.gif */; };
+		CA7CA8391F33045000D31A33 /* FeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA8381F33045000D31A33 /* FeedbackEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		B38741A51EB587C000EB5503 /* demo-big.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "demo-big.gif"; sourceTree = "<group>"; };
 		B3D75F901EB5EB63001388E6 /* GIFTextHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFTextHeader.swift; sourceTree = "<group>"; };
 		B3D75F9A1EB5FC05001388E6 /* demo-small.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "demo-small.gif"; sourceTree = "<group>"; };
+		CA7CA8381F33045000D31A33 /* FeedbackEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				B32DFBEA1EB649300099AB6B /* GIFItem.swift */,
 				B38741811EB584ED00EB5503 /* GIFHeader.swift */,
 				B3D75F901EB5EB63001388E6 /* GIFTextHeader.swift */,
+				CA7CA8381F33045000D31A33 /* FeedbackEngine.swift */,
 			);
 			path = SwiftPullToRefresh;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				B387418B1EB584ED00EB5503 /* RefreshView.swift in Sources */,
 				B334529B1EB6DA17002069F8 /* TextFooter.swift in Sources */,
 				B38741881EB584ED00EB5503 /* GIFHeader.swift in Sources */,
+				CA7CA8391F33045000D31A33 /* FeedbackEngine.swift in Sources */,
 				B387418A1EB584ED00EB5503 /* TextHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
